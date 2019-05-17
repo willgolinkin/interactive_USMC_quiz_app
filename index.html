@@ -15,22 +15,22 @@
           <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmUU3XMP4fw4UT58UCiJGR7eSyGMSG_S7FmF55ZwbgdNWYJ1-" alt="marine-corps-logo"/>
         </a>
       </div>
-      <div class="Q&S">
-        <ul class= "Q&S_block">
-          <li>Question: <span class="questionNumber">0</span>/10</li>
-          <li>Score: <span class="score">0</span></li>
+      <div class="QS"<!--"col-8"--></div>
+        <ul class= "QS_block">
+          <li class="QuestionScore">Question: <span class="questionNumber">0</span>/10</li>
+          <li class="QuestionScore">Score: <span class="score">0</span></li>
         </ul>
       </div>
     </header>
-    <section class="begin">
-      <h1>Do you know your Corps?</h1>
-      <form id="js-quiz-form">
-          <button class= "submit" type="submit">Let's find out!</button>
-      </form>
-      <ul class="quiz-question js-quiz-question">
-      </ul>
-    </section>
+    <main class="main" role="main">
+      <div class="quizStart">
+          <h1>Do you know your Corps?</h1>
+          <button class= "startButton" type="submit">Let's find out!</button>
+      </div>
+      <div class="questionAnswerForm"></div>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="datastore.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
