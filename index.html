@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Marine Corps Quiz App</title>
+    <meta name="description" content="Test your knowledge of Marine Corps history!">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <header role="banner">
+      <div class="EGA">
+        <a href="index.html">
+          <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmUU3XMP4fw4UT58UCiJGR7eSyGMSG_S7FmF55ZwbgdNWYJ1-" alt="marine-corps-logo"/>
+        </a>
+      </div>
+      <div class="Q&S">
+        <ul class= "Q&S_block">
+          <li>Question: <span class="questionNumber">0</span>/10</li>
+          <li>Score: <span class="score">0</span></li>
+        </ul>
+      </div>
+    </header>
+    <section class="begin">
+      <h1>Do you know your Corps?</h1>
+      <form id="js-quiz-form">
+          <button class= "submit" type="submit">Let's find out!</button>
+      </form>
+      <ul class="quiz-question js-quiz-question">
+      </ul>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

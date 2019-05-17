@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ropa Sans', sans-serif;
+  }
+  
+  header ul {
+      padding: 10px 20px;
+      list-style: none;
+      text-align: center;
+      font-size: 25px;
+      text-transform: uppercase;
+  }
+  
+  li {
+    display: inline-block;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  
+  .logo {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+  }
+  
+  .begin {
+    text-align: center;
+  }
+  
+  .submit {
+      padding: 20px;
+      border: none;
+      background-color: rgb(26, 27, 27);
+      color: #ffffff;
+      font-size: 25px;
+      text-transform: uppercase;
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 40px;
+  }
