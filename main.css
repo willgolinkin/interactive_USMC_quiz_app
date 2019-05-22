@@ -19,6 +19,7 @@
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     font-size: 25px;
 }
   
@@ -112,13 +113,13 @@ input[type=radio] {
     margin-right: 10px;
 }
 
-h2 {
+/*h2 {
     text-align: left;
     margin-bottom: 40px;
     color: #ffffff;
     text-transform: uppercase
 }
-
+*/
 form button {
     padding: 20px;
     border: none;
