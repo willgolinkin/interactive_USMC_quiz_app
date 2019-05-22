@@ -3,48 +3,160 @@
     font-family: 'Ropa Sans', sans-serif;
   }
   
-  body {
+ body {
     border: 5px solid black;
-  }
+ }
   
-  .QS_block {
-      padding: 10px 20px;
-      list-style: none;
-      text-align: center;
-      font-size: 25px;
-      text-transform: uppercase;
-  }
+.block {
+    padding: 10px 20px;
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
   
-  .QuestionScore {
+.QuestionScore {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
-  }
+}
   
-  .logo {
+.logo {
     width: 25%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-  }
+}
   
-  .main {
+.main {
     text-align: center;
-  }
+}
   
-  .startButton {
-      padding: 20px;
-      border: none;
-      background-color: rgb(26, 27, 27);
-      color: #ffffff;
-      font-size: 25px;
-      text-transform: uppercase;
-      border-radius: 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 40px;
-      margin-bottom: 50px;
-  }
+.startButton {
+    padding: 20px;
+    border: none;
+    background-color: rgb(26, 27, 27);
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+main div {
+    margin: 0 auto;
+}
+
+label:nth-child(1) {
+    background-color: #3866AF
+}
+
+label:nth-child(2) {
+    background-color: #387AAF
+}
+
+label:nth-child(3) {
+    background-color: #3894AF
+}
+
+label:nth-child(4) {
+    background-color: #38A9AF
+}
+
+label {
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 22px
+}
+
+label:hover, label:focus {
+    background-color: #AF6438
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+input:checked {
+    border: 8px solid #ebca52;
+}
+
+input[type=radio] {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-transform: uppercase
+}
+
+form button {
+    padding: 20px;
+    border: none;
+    background-color: #ebca52;
+    color: #363946;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+form button:hover, form button:focus {
+    background-color: #363946;
+    color: #ebca52
+}
+
+.answer {
+    flex: 1 1 auto;
+}
+
+.questionAnswerForm {
+    display: none;
+    width: 50%;
+    color: black;
+}
+
+.questions {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.correctFeedback, .wrongFeedback {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center; 
+}
