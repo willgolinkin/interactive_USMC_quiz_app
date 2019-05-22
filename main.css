@@ -3,9 +3,13 @@
     font-family: 'Ropa Sans', sans-serif;
   }
   
- body {
-    border: 5px solid black;
+ /*body {
+    background-image: url(https://i.imgur.com/ivSATQT.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  }
+ */
   
 .block {
     padding: 10px 20px;
@@ -24,7 +28,7 @@
 }
   
 .logo {
-    width: 25%;
+    width: 15%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -54,25 +58,15 @@ main div {
     margin: 0 auto;
 }
 
-label:nth-child(1) {
-    background-color: #3866AF
-}
+.answerOption {
+    background-color: red;
 
-label:nth-child(2) {
-    background-color: #387AAF
-}
-
-label:nth-child(3) {
-    background-color: #3894AF
-}
-
-label:nth-child(4) {
-    background-color: #38A9AF
 }
 
 label {
     padding: 20px;
     margin-bottom: 10px;
+    font-size: 22px;
     display: flex;
     color: #ffffff;
     text-transform: uppercase;
@@ -82,7 +76,7 @@ label {
 }
 
 label:hover, label:focus {
-    background-color: #AF6438
+    background-color: rgb(255, 174, 0);
 }
 
 fieldset {
@@ -113,19 +107,13 @@ input[type=radio] {
     margin-right: 10px;
 }
 
-/*h2 {
-    text-align: left;
-    margin-bottom: 40px;
-    color: #ffffff;
-    text-transform: uppercase
-}
-*/
 form button {
     padding: 20px;
     border: none;
-    background-color: #ebca52;
-    color: #363946;
-    font-size: 18px;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
     text-transform: uppercase;
     border-radius: 0;
     cursor: pointer;
@@ -137,7 +125,7 @@ form button {
 
 form button:hover, form button:focus {
     background-color: #363946;
-    color: #ebca52
+    color: yellow;
 }
 
 .answer {
@@ -160,4 +148,18 @@ form button:hover, form button:focus {
     font-size: 25px;
     font-weight: bold;
     text-align: center; 
+}
+
+.nextButton {
+    padding: 20px;
+    border: none;
+    background-color: rgb(26, 27, 27);
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
