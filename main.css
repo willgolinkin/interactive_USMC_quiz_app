@@ -10,7 +10,15 @@
     background-position: center;
  }
  */
-  
+ .logo {
+    width: 30%;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
 .block {
     padding: 10px 20px;
     list-style: none;
@@ -25,15 +33,6 @@
     margin-right: auto;
     margin-bottom: 0;
     font-size: 25px;
-}
-  
-.logo {
-    width: 30%;
-    height: auto;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
 }
   
 .main {
@@ -61,11 +60,6 @@ main div {
     margin: 0 auto;
 }
 
-.answerOption {
-    background-color: red;
-
-}
-
 label {
     padding: 20px;
     margin-bottom: 10px;
@@ -75,15 +69,12 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    line-height: 22px
+    line-height: 22px;
+    background-color: red;
 }
 
 label:hover, label:focus {
     background-color: rgb(255, 174, 0);
-}
-
-fieldset {
-    border: none;
 }
 
 input {
@@ -129,6 +120,10 @@ form button {
 form button:hover, form button:focus {
     background-color: #363946;
     color: yellow;
+}
+
+fieldset {
+    border: none;
 }
 
 .answer {
