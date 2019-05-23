@@ -3,10 +3,22 @@
     font-family: 'Ropa Sans', sans-serif;
   }
   
- body {
-    border: 5px solid black;
+ /*body {
+    background-image: url(https://i.imgur.com/ivSATQT.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  }
-  
+ */
+ .logo {
+    width: 30%;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
 .block {
     padding: 10px 20px;
     list-style: none;
@@ -23,20 +35,14 @@
     font-size: 25px;
 }
   
-.logo {
-    width: 25%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-}
-  
 .main {
     text-align: center;
 }
   
 .startButton {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
     padding: 20px;
     border: none;
     background-color: rgb(26, 27, 27);
@@ -54,39 +60,21 @@ main div {
     margin: 0 auto;
 }
 
-label:nth-child(1) {
-    background-color: #3866AF
-}
-
-label:nth-child(2) {
-    background-color: #387AAF
-}
-
-label:nth-child(3) {
-    background-color: #3894AF
-}
-
-label:nth-child(4) {
-    background-color: #38A9AF
-}
-
 label {
     padding: 20px;
     margin-bottom: 10px;
+    font-size: 22px;
     display: flex;
     color: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    line-height: 22px
+    line-height: 22px;
+    background-color: red;
 }
 
 label:hover, label:focus {
-    background-color: #AF6438
-}
-
-fieldset {
-    border: none;
+    background-color: rgb(255, 174, 0);
 }
 
 input {
@@ -113,19 +101,13 @@ input[type=radio] {
     margin-right: 10px;
 }
 
-/*h2 {
-    text-align: left;
-    margin-bottom: 40px;
-    color: #ffffff;
-    text-transform: uppercase
-}
-*/
 form button {
     padding: 20px;
     border: none;
-    background-color: #ebca52;
-    color: #363946;
-    font-size: 18px;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
     text-transform: uppercase;
     border-radius: 0;
     cursor: pointer;
@@ -137,7 +119,11 @@ form button {
 
 form button:hover, form button:focus {
     background-color: #363946;
-    color: #ebca52
+    color: yellow;
+}
+
+fieldset {
+    border: none;
 }
 
 .answer {
@@ -160,4 +146,102 @@ form button:hover, form button:focus {
     font-size: 25px;
     font-weight: bold;
     text-align: center; 
+}
+
+.nextButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: none;
+    background-color: rgb(26, 27, 27);
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1190px) {
+    .questionAnswerForm,
+    .quizStart {
+        width: 80%;
+        margin-bottom: 100px
+    }
+
+    /*.logo {
+        margin-top: 
+    }
+    */
+    .QuestionScore {
+        padding: 15px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 650px) {
+    /*.logo {
+        display: block;
+        margin: auto;
+    }
+    */
+    header ul {
+        margin: 10px;
+        text-align: center
+    }
+    h1 {
+        font-size: 1.5em
+    }
+    header ul li {
+        padding: 10px;
+        font-size: 18px
+    }
+    .EGA, .QS {
+        width: 100%
+    }
+
+    .block {
+        margin-top: 30px;
+    }
+    
+    .QuestionScore {
+        display: block;
+        font-size: 22px;
+    }
+    .quizStart {
+        width: 100%;
+        padding-top: 0;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 18px
+    }
+    
+    .questionAnswerForm {
+        width: 100%;
+        padding: 20px;
+        margin-top: 0
+    }
+    
+    label {
+        font-size: 16px;
+        padding: 15px
+    }
+
+    .correctFeedback p, .wrongFeedback p {
+        font-size: 22px;
+        margin: 0 15px
+    }
+
+    /*.startButton, .nextButton {
+        font-size: 22px;
+        padding: 10px;
+    }
+    */
+   
 }
