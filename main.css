@@ -10,11 +10,13 @@
     background-position: center;
  }
  */
+ .EGA {
+    text-align: center;
+ }
+ 
  .logo {
-    width: 30%;
+    width: 20%;
     height: auto;
-    display: flex;
-    flex: 1 .5 auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -126,6 +128,7 @@ form button:hover, form button:focus {
 
 fieldset {
     border: none;
+    display: flex;
 }
 
 .answer {
@@ -189,23 +192,42 @@ fieldset {
     margin-bottom: 100px
 }
 
-/*.logo {
-    margin-top: 
+.EGA {
+    text-align: center;
+ }
+ 
+ .logo {
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
-*/
 
 .QuestionScore {
     padding: 5px;
     text-align: center;
   }
 }
-@media screen and (max-width: 350px) {
-    .logo {
+@media screen and (max-width: 320px) {
+    /*.logo {
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 100px;
 
+    }*/
+
+    .EGA {
+        text-align: center;
+     }
+     
+     .logo {
+        width: 40%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
     }
 
     header ul {
