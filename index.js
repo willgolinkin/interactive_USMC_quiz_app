@@ -28,20 +28,25 @@ function generateQuestion () {
                 </fieldset>
             </form>
         </div>`;
-  } else {
+    } else {
       renderResults();
       restartQuiz();
-      $('.questionNumber').text(10)
+      $('.questionNumber').text(5);
     }
-  }
+}
 
 
 //increment question number
+//need to stop changing questionNumber when five questions are answered
 function changeQuestionNumber() {
     //if (questionNumber < STORE.length) {
         questionNumber ++;
+        $('.questionNumber').text(questionNumber+1);
+    //} else {
+     //   renderResults ();
+    // restartQuiz ();
     //}
-    $('.questionNumber').text(questionNumber+1);
+    
 }
 
 //increment score
@@ -131,13 +136,43 @@ function updateScore () {
 
 //when quiz is over this is html for the page
 function renderResults () {
-    //if got more than 7 right, then display a success message
-    if (score >= 7) {
+    //if got more than 3 right, then display a success message
+    /*if (score >= 3) {
         console.log(passed);
-    //if less than 7, display a fail message
+        $('.questionAnswerForm').html(`<div class="results correctFeedback">
+        <h3>You know your Corps!</h3>
+        <img src="https://i.imgur.com/qwWsa3Cb.jpg" alt="SemperFi"/>
+        <p>You got ${score} / 5</p>
+        <p>Semper Fidelis!</p>
+        <button class="restartButton">Restart Quiz</button>
+        </div>`);
+    //if less than 3, display a fail message
     } else {
         console.log(failed);
+        $('.questionAnswerForm').html(`<div class="results correctFeedback">
+        <h3>Back to Boot Camp!</h3>
+        <img src="https://i.imgur.com/XsuL3alb.jpg" alt="drill_instructor"/>
+        <p>You got ${score} / 5</p>
+        <p>History is our religion so study up!</p>
+        <button class="restartButton">Restart Quiz</button>
+        </div>`);
     }
+    */
+   if (score >= 3) {
+    $('.questionAnswerForm').html(`<div class="results correctFeedback">
+    <h3>You're on fire!</h3>
+    <img src="https://i.imgur.com/qwWsa3Cb.jpg" alt="drill_instructor"/>
+    <p>You got ${score} / 10</p>
+    <p>You're ready to plan your backpacking trip!</p>
+    <button class="restartButton">Restart Quiz</button></div>`);
+  } else {
+    $('.questionAnswerForm').html(`<div class="results correctFeedback">
+    <h3>You might want to stick with car camping</h3>
+    <img src="https://i.imgur.com/XsuL3alb.jpg" alt="drill_instructor"/>
+    <p>You got ${score} / 10</p>
+    <p>With more camping and outdoor experience you'll be able to pass this quiz in no time</p>
+    <button class="restartButton">Restart Quiz</button></div>`);
+  }
 }
 
 //what happens when user clicks next question
@@ -152,7 +187,11 @@ function renderNextQuestion () {
 
 //restart quiz- reloads page to start quiz over
 function restartQuiz () {
-    console.log ('reloading quiz');
+    $('main').on('click', '.restartButton', function (event) {
+        console.log ('reloading quiz');
+        //reloads the current resource, like the refresh button
+        location.reload(true);
+    });
 }
 
 //run quiz functions
