@@ -3,15 +3,17 @@ let score = 0;
 
 //generate question html
 function generateQuestion () {
+    //don't repeate yourself if possible; redone using some method/code; array.forEach or .map
+    //line 12 to last label, could be a function call based off variable declaration that stores that value
     if (questionNumber < STORE.length) {
       return `<div class="question-${questionNumber}">
         <h2 class="questions">${STORE[questionNumber].question}</h2>
             <form>
                 <fieldset>
-                    <label class="answerOption">
+                <label class="answerOption">
                         <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
                         <span>${STORE[questionNumber].answers[0]}</span>
-                    </label>
+                    </label>    
                     <label class="answerOption">
                         <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
                         <span>${STORE[questionNumber].answers[1]}</span>
@@ -139,9 +141,9 @@ function renderResults () {
     //if got more than 3 right, then display a success message
     if (score >= 3) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
-        <h3>You know your Corps!</h3>
-        <img src="https://i.imgur.com/qwWsa3Cb.jpg" alt="SemperFi"/>
-        <p>You got ${score} / 5</p>
+        <h3>You know your Corps!</h3><br>
+        <img src="https://i.imgur.com/qwWsa3Cb.jpg" alt="SemperFi"/><br>
+        <p>You got ${score} / 5</p><br>
         <p>Semper Fidelis!</p>
         <button class="restartButton">Restart Quiz</button>
         </div>`);
@@ -150,9 +152,9 @@ function renderResults () {
     } else {
         
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
-        <h3>Back to Boot Camp!</h3>
-        <img src="https://i.imgur.com/XsuL3alb.jpg" alt="drill_instructor"/>
-        <p>You got ${score} / 5</p>
+        <h3>Back to Boot Camp!</h3><br>
+        <img src="https://i.imgur.com/XsuL3alb.jpg" alt="drill_instructor"/><br>
+        <p>You got ${score} / 5</p><br>
         <p>History is our religion so study up!</p>
         <button class="restartButton">Restart Quiz</button>
         </div>`);
@@ -174,13 +176,15 @@ function renderNextQuestion () {
 function restartQuiz () {
     $('main').on('click', '.restartButton', function (event) {
         console.log ('reloading quiz');
-        //reloads the current resource, like the refresh button
+        //reloads the current resource, like the refresh button; could be improved
         location.reload(true);
     });
 }
 
 //run quiz functions
 function createQuiz () {
+    //copy and paste questionNumber and quizScore variables into this function to avoid global variables
+    
     startQuiz ();
     renderQuestion ();
     userSelectAnswer ();

@@ -5,9 +5,9 @@ const STORE = [
             1770,
             1870,
             1970,
-            1776
+            1775
         ],
-        correctAnswer: 1776
+        correctAnswer: 1775
     },
     {
         question: 'Where was the Marine Corps founded',
